@@ -78,30 +78,35 @@ function App({ Component, pageProps }) {
     <div>
       <button onClick={toggleCalendar} style={{ marginBottom: '20px' }}>Calendario</button>  {/* Botón para mostrar/ocultar el calendario */}
       
-      {showCalendar && (  {/* Mostrar el calendario si showCalendar es true */}
-        <div>
-          <Calendar
-            localizer={localizer}
-            events={events}
-            views={["month", "week", "day"]}
-            date={dayjs("2023-12-19T12:00:00").toDate()}
-            toolbar={true}
-            defaultView="month"
-            min={dayjs("2023-12-23T08:00:00").toDate()}
-            max={dayjs("2023-12-23T18:00:00").toDate()}
-            formats={{
-              dayHeaderFormat: (date) => {
-                return dayjs(date).format("DD/MM/YYYY");
-              },
-            }}
-            components={components}
-          />
-        </div>
-      )}
+      {showCalendar && (
+  /* Mostrar el calendario si showCalendar es true */
+  <div
+    style={{
+      height: "95vh",
+      width: "70vw",
+    }}
+  >
+    <Calendar
+      localizer={localizer}
+      events={events}
+      views={["month", "week", "day"]}
+      date={dayjs("2023-12-19T12:00:00").toDate()}
+      toolbar={true}
+      defaultView="month"
+      min={dayjs("2023-12-23T08:00:00").toDate()}
+      max={dayjs("2023-12-23T18:00:00").toDate()}
+      formats={{
+        dayHeaderFormat: (date) => {
+          return dayjs(date).format("DD/MM/YYYY");
+        },
+      }}
+      components={components}
+    />
+  </div>
+)}
     </div>
   );
 }
 
+
 export default App;
-
-
