@@ -80,11 +80,7 @@ function App({ Component, pageProps }) {
       
       {showCalendar && (  {/* Mostrar el calendario si showCalendar es true */}
         <div
-          style={{
-            height: "95vh",
-            width: "70vw",
-          }}
-        >
+          style={{ height: "95vh", width: "70vw"}} >
           <Calendar
             localizer={localizer}
             events={events}
