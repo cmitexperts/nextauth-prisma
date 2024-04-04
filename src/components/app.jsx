@@ -79,8 +79,7 @@ function App({ Component, pageProps }) {
       <button onClick={toggleCalendar} style={{ marginBottom: '20px' }}>Calendario</button>  {/* Botón para mostrar/ocultar el calendario */}
       
       {showCalendar && (  {/* Mostrar el calendario si showCalendar es true */}
-        <div
-          style={{ height: "95vh"}} >
+        <div>
           <Calendar
             localizer={localizer}
             events={events}
